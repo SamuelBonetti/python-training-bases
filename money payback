@@ -1,0 +1,23 @@
+total = int(input('Quanto você quer sacar? '))
+
+notas50 = notas20 = notas10 = notas1 = 0
+
+if total >= 50:
+    notas50 = total // 50
+    total = total % 50
+
+if total >= 20:
+    notas20 = total // 20
+    total = total % 20
+
+if total >= 10:
+    notas10 = total // 10
+    total = total % 10
+
+notas1 = total
+
+print('Você receberá:')
+print(f'{notas50} notas de R$50')
+print(f'{notas20} notas de R$20')
+print(f'{notas10} notas de R$10')
+print(f'{notas1} notas de R$1')
