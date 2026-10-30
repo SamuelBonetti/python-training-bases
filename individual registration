@@ -1,0 +1,21 @@
+mulher=0
+homem=0
+maiores=0
+menores=0
+
+while True:
+    print('Cadastre uma pessoa')
+    idade=int(input('Qual a idade da pessoa? '))
+    sexo=str(input('Qual o sexo da pessoa? [M]/[F]')).upper().strip()
+    if sexo == 'M':
+        homem+=1
+    elif sexo == 'F':
+        mulher+=1
+    if idade >= 18:
+        maiores+=1
+    elif idade <18:
+        menores+=1
+    continuar=str(input('Você quer continuar? [S]/[N]]')).strip().upper()
+    if continuar == 'N':
+        break
+print('O total de homens são {} e mulheres {} dentre eles temos {} maiores de idade'.format(homem,mulher,maiores))
