@@ -1,0 +1,34 @@
+produtos = []
+precos = []
+
+acima = 0
+c = 1
+
+while True:
+    nome = input('Nome do produto: ')
+    produtos.append(nome)
+
+    valor = float(input('Preço do produto: '))
+    precos.append(valor)
+
+    if c == 1:
+        barato = valor
+        mais_barato = nome
+
+    if valor < barato:
+        barato = valor
+        mais_barato = nome
+
+    if valor > 1000:
+        acima += 1
+
+    c += 1
+
+    continuar = input('Quer continuar? [S/N] ').strip().upper()
+
+    if continuar == 'N':
+        break
+
+print(f'Valor total: R$ {sum(precos):.2f}')
+print(f'Produtos acima de R$1000: {acima}')
+print(f'Produto mais barato: {mais_barato} (R$ {barato:.2f})')
