@@ -1,0 +1,15 @@
+import random
+opçoes = ['pedra','papel','tesoura']
+maquina= random.choice(opçoes)
+meu=str(input('Qual sua escolha? '))
+
+if (maquina == 'pedra' and meu == 'tesoura') or \
+    (maquina == 'tesoura' and meu == 'papel') or \
+    (maquina == 'papel' and meu == 'pedra'):
+    print('A maquina ganhou')
+elif maquina == meu:
+    print('empate')
+elif meu not in opçoes:
+    print('ilogico')
+else:
+    print('você ganhou'
