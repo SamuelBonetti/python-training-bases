@@ -1,0 +1,12 @@
+termos=int(input('Quantos termos você deseja? '))
+t1=0
+t2=1
+c=1
+lista=[t1,t2]
+while c!=termos:
+    t3=t2+t1
+    lista.append(t3)
+    t1=t2
+    t2=t3
+    c+=1
+print(lista)
