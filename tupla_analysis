@@ -1,0 +1,13 @@
+a=int(input('Digite um número: '))
+b=int(input('Digite um número: '))
+c=int(input('Digite um número: '))
+d=int(input('Digite um número: '))
+numeros=(a,b,c,d)
+print('Você digitou {}'.format(numeros))
+print('O número 9 apareceu {} vezes'.format(numeros.count(9)))
+if 3 in numeros:
+    print('O numero 3 esta na posição {}'.format(numeros.index(3)))
+for n in numeros:
+    if n%2==0:
+        print(n)
+print('São os números pares')
